@@ -1,7 +1,34 @@
+<b>Goal</b>: Seting up LINC-OE simple optical topology controlled by iControl and a packet simple topology controlled by POX. Then failing some of the optical and packet links and observing the behaviuor.   
+<b>Requirements:</b>
+A basic knowlege of LINC-OE, TAP interfaces, POX, Erlang language and linux CLI is required. 
+Doing https://github.com/Ehsan70/Mininet_LINC_script/blob/master/LINCoe_and_iControl.md tutorial is a must. 
+
+<b>Environment: </b> I have used the VM from sdn hub, I recommond you do the same. Link for installation is provided below: http://sdnhub.org/tutorials/sdn-tutorial-vm/
+
+<b>Road Map: </b>This document has two sections for setup: 
+
+ 1. setting up the network   
+ 2. Doing tests </br>
+
+Then the tutorial would run couple of experminets. After the experminet the tutorial talkes about the details of the network and what is goingt on under the hood.   
+
+<b>Notations: </b>
+ - `>` means the linuc command line <br>
+ - `iControl>` Means the iControll command line
 
 
+# 1. setting up the network #
+## Optical Network
+ a. Run iControl: 
+ ```shell
+ > cd loom/iControl
+ > rel/icontrol/bin/icontrol console
+ ```
+ The iControl starts and listens on 0.0.0.0:6653 </br>
+ b. Clearting the tap interfaces: 
 
-Here is the `sys.config`file: 
+ c. Set up the `sys.config` file: 
+ `rel/files/sys.config` file for the network shown above should looks as following:
 ```erlang
 [{linc,
   [{of_config,disabled},
@@ -111,4 +138,17 @@ Here is the `sys.config`file:
  {sync,
   [{excluded_modules, [procket]}]}].
 ```
-
+d. start LINC-OE: 
+ ```shell
+ > make rel && sudo rel/linc/bin/linc console
+ ```
+## Packet Network
+ a. Run Ryu 
+ If you are using SDN hub Vm, go to `/home/ubuntu/ryu` and run Ryu: 
+ ```shell
+ > sudo ./bin/ryu-manager --verbose ryu/app/simple_switch_13.py
+ ```
+ b. Start up the Mininet network 
+ ```shell
+ > sudo -E python SimpleOptTopoScratch.py
+ ```
