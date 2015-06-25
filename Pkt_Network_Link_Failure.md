@@ -34,5 +34,7 @@ When the controller and the topo are up and running, I do the follwoing in the M
 5. pingall
 
 The captured packets can be found in [mn_ryu_linkfailure_of3.pcapng](https://github.com/Ehsan70/Link_Failure_in_Mininet_LINC/blob/master/WiresharkTests/mn_ryu_linkfailure_of3.pcapng). 
+Here is the topo: 
+![Alt text](resources/PktNet_3SWs_3Hosts.jpg?raw=true  "Packet Network for link failure testing")
 
 
