@@ -14,7 +14,7 @@ Doing https://github.com/Ehsan70/Mininet_LINC_script/blob/master/LINCoe_and_iCon
  - `iControl>` Means the iControll command line
 
 
-# 1. setting up the network and the controller#
+# 1. Setting up the network and the controller #
  a. Run Ryu 
  If you are using SDN hub Vm, go to `/home/ubuntu/ryu` and run Ryu: 
  ```shell
@@ -24,3 +24,15 @@ Doing https://github.com/Ehsan70/Mininet_LINC_script/blob/master/LINCoe_and_iCon
  ```shell
  > sudo -E python SimpleOptTopoScratch.py
  ```
+# 2. Doing some tests and observing the behavior 
+When the controller and the topo are up and running, I do the follwoing in the Mininet CLI: 
+
+1. pingall
+2. bring a link down
+3. pingall
+4. bring the link up again
+5. pingall
+
+The captured packets can be found in [mn_ryu_linkfailure_of3.pcapng](https://github.com/Ehsan70/Link_Failure_in_Mininet_LINC/blob/master/WiresharkTests/mn_ryu_linkfailure_of3.pcapng). 
+
+
