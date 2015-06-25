@@ -25,8 +25,13 @@ Then the tutorial would run couple of experminets. After the experminet the tuto
  > rel/icontrol/bin/icontrol console
  ```
  The iControl starts and listens on 0.0.0.0:6653 </br>
+ 
  b. Clearting the tap interfaces: 
-
+ For this section I have created a bash script called `Mininet_LINC_script/TapSetup.bash` that takes care of tap interfaces. 
+ ```shell
+ sudo bash TapSetup.bash 7 up
+ ```
+ The first argument is the number of tap interfaces and the second one is `up` which also brings the interfaces up.
  c. Set up the `sys.config` file: 
  `rel/files/sys.config` file for the network shown above should looks as following:
 ```erlang
@@ -150,5 +155,5 @@ d. start LINC-OE:
  ```
  b. Start up the Mininet network 
  ```shell
- > sudo -E python SimpleOptTopoScratch.py
+ > sudo -E python ComplexPktTopo_PktLink_and_Taps.py 
  ```

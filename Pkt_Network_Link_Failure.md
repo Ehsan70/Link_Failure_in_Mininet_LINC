@@ -1,7 +1,6 @@
 <b>Goal</b>: Setting up a simple packet topology controlled by Ryu. Then failing some of the optical and packet links and observing the behaviuor.   
 <b>Requirements:</b>
 A basic knowlege of Ryu, OpenFlow and linux CLI is required. 
-Doing https://github.com/Ehsan70/Mininet_LINC_script/blob/master/LINCoe_and_iControl.md tutorial is a must. 
 
 <b>Environment: </b> I have used the VM from sdn hub, I recommond you do the same. Link for installation is provided below: http://sdnhub.org/tutorials/sdn-tutorial-vm/
 
