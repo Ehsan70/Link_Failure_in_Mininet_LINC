@@ -19,17 +19,12 @@ class Simple3PktSwitch( Topo ):
         h3 = self.addHost( 'h3' )
 
 
-        opts =dict(protocols='OpenFlow10')
+        # opts =dict(protocols='OpenFlow10')
 
         # Adding switches
-        p1 = self.addSwitch('p1', dpid="0000ffff00000001",opts=opts)
-        p2 = self.addSwitch('p2', dpid="0000ffff00000002",opts=opts)
-        p3 = self.addSwitch('p3', dpid="0000ffff00000003",opts=opts)
-
-		#p1 = self.addSwitch('p1', dpid="0000ffff00000001")
-        #p2 = self.addSwitch('p2', dpid="0000ffff00000002")
-        #p3 = self.addSwitch('p3', dpid="0000ffff00000003")
-
+        p1 = self.addSwitch('p1', dpid="0000ffff00000001")
+        p2 = self.addSwitch('p2', dpid="0000ffff00000002")
+        p3 = self.addSwitch('p3', dpid="0000ffff00000003")
 
         # Add links
         self.addLink( h1, p1 )
