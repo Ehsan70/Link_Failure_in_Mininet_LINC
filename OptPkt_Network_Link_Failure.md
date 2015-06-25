@@ -157,3 +157,6 @@ d. start LINC-OE:
  ```shell
  > sudo -E python ComplexPktTopo_PktLink_and_Taps.py 
  ```
+
+##Topolog of the Network:
+![Alt text](resources/ComplexMultiTopoWithLoop.jpg?raw=true  "Packet and optical Network with loops for link failure testing")
