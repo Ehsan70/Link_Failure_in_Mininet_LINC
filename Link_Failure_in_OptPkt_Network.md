@@ -1,6 +1,6 @@
-<b>Goal</b>: Seting up LINC-OE simple optical topology controlled by iControl and a packet simple topology controlled by POX. Then failing some of the optical and packet links and observing the behaviuor.   
+<b>Goal</b>: Seting up LINC-OE simple optical topology controlled by iControl and a packet simple topology controlled by Ryu. Then failing some of the optical and packet links and observing the behaviuor.   
 <b>Requirements:</b>
-A basic knowlege of LINC-OE, TAP interfaces, POX, Erlang language and linux CLI is required. 
+A basic knowlege of LINC-OE, TAP interfaces, Ryu, Erlang language and linux CLI is required. 
 Doing https://github.com/Ehsan70/Mininet_LINC_script/blob/master/LINCoe_and_iControl.md tutorial is a must. 
 
 <b>Environment: </b> I have used the VM from sdn hub, I recommond you do the same. Link for installation is provided below: http://sdnhub.org/tutorials/sdn-tutorial-vm/
