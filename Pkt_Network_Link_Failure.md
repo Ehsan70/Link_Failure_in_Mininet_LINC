@@ -22,7 +22,7 @@ Doing https://github.com/Ehsan70/Mininet_LINC_script/blob/master/LINCoe_and_iCon
  ```
  b. Start up the Mininet network 
  ```shell
- > sudo -E python SimpleOptTopoScratch.py
+ > sudo -E python Link_Failure_PktNet.py
  ```
 # 2. Doing some tests and observing the behavior 
 When the controller and the topo are up and running, I do the follwoing in the Mininet CLI: 
