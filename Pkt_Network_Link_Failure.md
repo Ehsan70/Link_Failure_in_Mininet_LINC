@@ -37,4 +37,7 @@ The captured packets can be found in [mn_ryu_linkfailure_of3.pcapng](https://git
 Here is the topo: 
 ![Alt text](resources/PktNet_3SWs_3Hosts.jpg?raw=true  "Packet Network for link failure testing")
 
+Note that when a link goes down, odp_port_status messages are sent to the controller from switch. Here is the structure of this message: 
+
+![Alt text](resources/OFPT_PORT_STATUS_v13.jpg?raw=true  "Structure of the ofp_port_status in open flow version 1.3")
 
