@@ -22,4 +22,13 @@ Following procidure is applied to all of the tests:
 - Note that Ryu is openflow 1.3 capable and the switches are 1.3 so they agree on 1.3. 
 - Above scenarios is applied. 
 
+#### mn_ryu_linc_PktOpt_linkfailure.pcapng
+- This file contains 
+ - packets exchanged between ryu controller and packet network. 
+ - packets exchanged between icontrol controller and optical network. 
+- Note that packet network is created by "sudo -E python Link_Failure_PktNet.py  
+- Note that Ryu is openflow 1.3 capable and the switches are 1.3 so they agree on 1.3. 
+- Above scenarios is applied. 
+- Follow instructions at [OptPkt_Network_Link_Failure.md](https://github.com/Ehsan70/Link_Failure_in_Mininet_LINC/blob/master/OptPkt_Network_Link_Failure.md)
+
 
