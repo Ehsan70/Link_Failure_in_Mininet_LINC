@@ -150,5 +150,5 @@ d. start LINC-OE:
  ```
  b. Start up the Mininet network 
  ```shell
- > sudo -E python SimpleOptTopoScratch.py
+ > sudo -E python ComplexPktTopo_PktLink_and_Taps.py 
  ```
