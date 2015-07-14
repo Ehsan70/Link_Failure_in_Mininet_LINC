@@ -32,7 +32,20 @@ Then the tutorial would run couple of experminets. After the experminet the tuto
  sudo bash TapSetup.bash 7 up
  ```
  The first argument is the number of tap interfaces and the second one is `up` which also brings the interfaces up.
+ 
  c. Set up the `sys.config` file: 
+Note that `sys.config` may be on different absolute directories depending on whene linc-oe was cloned and names. Have a look at these info: 
+```shell
+ubuntu@sdnhubvm:~/linc-oe[11:13] (master)$ pwd
+/home/ubuntu/linc-oe
+ubuntu@sdnhubvm:~/linc-oe[11:13] (master)$ git remote -v
+origin	https://github.com/FlowForwarding/LINC-Switch (fetch)
+origin	https://github.com/FlowForwarding/LINC-Switch (push)
+ubuntu@sdnhubvm:~/linc-oe[11:13] (master)$ ls
+apps/  docs/    Makefile    README.md  rebar.config  scripts/
+deps/  LICENSE  pcap.data/  rebar*     rel/
+
+```
  `rel/files/sys.config` file for the network shown above should looks as following:
 ```erlang
 [{linc,
@@ -147,6 +160,8 @@ d. start LINC-OE:
  ```shell
  > make rel && sudo rel/linc/bin/linc console
  ```
+ > if `make rel` did not work try `sudo make rel`
+ 
 ## Packet Network
  a. Run Ryu 
  If you are using SDN hub Vm, go to `/home/ubuntu/ryu` and run Ryu: 
